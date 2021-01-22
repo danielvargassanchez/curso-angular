@@ -1,0 +1,20 @@
+<div class="main-container">
+    <form class="login-container" [formGroup]="form">
+        <mat-form-field>
+            <mat-label>Brand</mat-label>
+            <input matInput placeholder="Brand" formControlName="brand">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Memory</mat-label>
+            <input matInput placeholder="Memory" type="number" formControlName="memory">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Size</mat-label>
+            <input matInput placeholder="Size" formControlName="size">
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" [disabled]="form.invalid" (click)="save()">save</button>
+    </form>
+</div>
